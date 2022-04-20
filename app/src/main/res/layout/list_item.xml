@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:id="@+id/list"
+    android:id="@+id/list0"
     android:orientation="vertical"
     android:minHeight="@dimen/list_item_height"
     android:background="@color/tan_background">
@@ -66,6 +67,7 @@
                         android:textStyle="italic" />
 
                     <ImageView
+                        android:id="@+id/pausePlay"
                         android:layout_width="38dp"
                         android:layout_height="38dp"
 
@@ -75,6 +77,8 @@
                         android:padding="4dp"
 
                         android:src="@drawable/whiteplay"></ImageView>
+
+
 
                 </RelativeLayout>
 

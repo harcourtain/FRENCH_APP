@@ -2,8 +2,9 @@ package com.example.miwok_app;
 
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
+    public ImageView pausePlay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +47,13 @@ public class NumbersActivity extends AppCompatActivity {
 //        listView.setAdapter(itemsAdapter);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(itemsAdapter);
+                //setBackgroundResource(R.drawable.whiteplay);
+
+//        if(current.getImageResourseId()!=0)
+//            imageView.setImageResource(current.getImageResourseId());
+//        else
+//            imageView.setVisibility(View.GONE);;
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent,View view,int position,long id){

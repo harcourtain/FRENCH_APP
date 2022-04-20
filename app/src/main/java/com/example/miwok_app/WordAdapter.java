@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class WordAdapter extends ArrayAdapter<Word> {
     private static final String LOG_TAG = WordAdapter.class.getSimpleName();
     private int mColor;
+    public ImageView pausePlay;
     public WordAdapter(Activity context,ArrayList<Word> words,int color){
         super(context,0,words);
         mColor=color;
@@ -40,7 +41,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
             imageView.setImageResource(current.getImageResourseId());
         else
             imageView.setVisibility(View.GONE);
-
+        pausePlay= (ImageView) listItemview.findViewById(R.id.pausePlay);
+        pausePlay.setImageResource(R.drawable.whiteplay);
         View textContainer=listItemview.findViewById(R.id.text_container);
         int color= ContextCompat.getColor(getContext(),mColor);
         textContainer.setBackgroundColor(color);
